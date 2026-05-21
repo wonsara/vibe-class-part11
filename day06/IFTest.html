@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="Score" placeholder="점수를 입력">
+    </div>
+    <div>
+        <button type="button" onclick="getResult();">확인</button>
+    </div>
+    <script>
+
+        function getResult() {
+
+            const score = document.querySelector('#Score').value;
+            
+           if(score.trim().length === 0) {
+                alert('값을 입력하세요');
+                return;
+            }
+            if(numScore >= 65) {
+                alert('합격입니다.');
+            } else {
+                alert('불합격입니다.');
+        }
+    }
+    </script>
+</body>
+</html>
