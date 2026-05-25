@@ -7,26 +7,31 @@
 </head>
 
 <body>
-    <div>
-        <button type="button" onclick="getResult();">확인</button>    
+   <div>
+        <button type="button" onclick="getResult();">값출력</button>
+
+        <p id="numbers"></p>
+        
     </div>
 
     <script>
 
         function getResult() {
 
-            const age = Math.floor(Math.random() * 20) + 1; // 1~ 20사이 랜덤값
-        
-            if(age >= 18) {
-                alert(age + "세 : 성인");
-            }
-            else if(age >= 13) {
-                alert(age + "세 : 청소년");
-            }
-             else {
-                alert(age + "세 : 어린이");
-            }
+            const randVal = Math.floor(Math.random() * 20) + 1; // 1 ~ 20사이 랜덤값
+            const pTag = document.querySelector('#numbers');
+            pTag.textContent = `${randVal} 나이`;
+
+       if(randVal >= 18) {
+            alert('나이 : ' + randVal + ', 성인');
         }
+        else if(randVal >= 13) {
+            alert(`나이 : ${randVal}, 청소년`);
+        }
+        else if(randVal >= 13) {
+            alert(`나이 : ${randVal}, 어린이`);
+        }
+   }
     </script>
 </body>
 

@@ -9,22 +9,26 @@
     <div>
         <input type="number" id="Score" placeholder="점수를 입력">
     </div>
+
     <div>
         <button type="button" onclick="getResult();">확인</button>
     </div>
+
     <script>
 
         function getResult() {
 
-            const score = document.querySelector('#Score').value;
+            //선택자를 사용해서 html 값을 가져오기
+            //선택자는 css와 동일 (id: #, class명은 . ...)
+            const score = document.querySelector('#Score');
             
-           if(score.trim().length === 0) {
+           if(score.value.trim().length === 0) {
                 alert('값을 입력하세요');
-                return;
+                return; //함수 종료 
             }
-            if(numScore >= 65) {
+            if(Score.value >= 65) {
                 alert('합격입니다.');
-            } else {
+            }else {
                 alert('불합격입니다.');
         }
     }
