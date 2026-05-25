@@ -13,6 +13,7 @@
         
         .container{
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -54,7 +55,7 @@
                 </div>
 
                 <div>
-                    <input type="password" id="passwd" placeholder="password입력">
+                    <input type="password" id="passwd" placeholder="PASSWORD 입력">
                 </div>
 
                 <div>
@@ -72,16 +73,18 @@
         function login() {
             //html 값을 ->자바스크립트로 가져올 수 있음
             //자바스크립트의 결과 값 -> html 영역에 적용 가능
+
+            //html 영역을 자바스크립트에서는 docuemnt 라는 객체를 사용
             const userId = document.getElementById("userId");
             const passwd = document.getElementById("passwd");
 
-        if(userId.value.trim().length ===0) {
+        if(userId.value.trim().length === 0) {
             alert("아이디를 입력하십시오.");
             //함수끝내기
             return;
         }
 
-        if(passwd.value.trim().length ===0) {
+        if(passwd.value.trim().length === 0) {
             alert("패스워드를 입력하십시오.");
             //함수끝내기
             return;
